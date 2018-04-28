@@ -19,7 +19,7 @@ var jsonFile_all_ID;
 
 function createFirstAll(state){
 	slideVolume = new SlideBar(width/2, height/2-150, 200, 20, 0, 1, 0.7);
-	nameSongNow = new nameSongClass(width/2, height/2-270, 200, 200, "", 27, 'ITALIC', color('rgb(255, 255, 255)'));
+	nameSongNow = new nameSongClass(width/2, height/2-270, 200, 20, "", 27, 'ITALIC', color('rgb(255, 255, 255)'));
 	songNow = floor(random(0,jsonFile_all_ID.data.length));
 
 	// this code i learn from p5js.org and chrome console
