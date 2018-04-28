@@ -103,7 +103,7 @@ function AmplitudeGraph(x, y, w, h, numgraph, textInput){
 		if(newIma)
 			this.ima = createImg(newIma).hide();
 
-		this.boxcontain = new BoxContain(this.pos.x, this.pos.y, this.size.x, this.size.y);
+		this.boxcontain = new BoxContain(this);
 	}
 }
 
@@ -189,6 +189,6 @@ function FFTGraph(x, y, w, h, numgraph){
 		this.size.y = newSize.y || this.size.y;
 		this.numgraph = newNumgraph || this.numgraph;
 
-		this.boxcontain = new BoxContain(this.pos.x, this.pos.y, this.size.x, this.size.y);
+		this.boxcontain = new BoxContain(this);
 	}
 }

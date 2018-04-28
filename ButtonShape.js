@@ -70,17 +70,26 @@ function buttonShape(x, y, w, h, name, textsize, textstyle, whenClick) {
 		this.textsize = newTextSize || this.textsize;
 		this.textstyle = newTextStyle || this.textstyle;
 
-		this.boxcontain = new BoxContain(this.pos.x, this.pos.y, this.size.x, this.size.y);
+		this.boxcontain = new BoxContain(this);
 	}
 }
 
-function nameSongClass(x, y, name, textsize, textstyle, colortext){
+function nameSongClass(x, y, w, h, name, textsize, textstyle, colortext){
 	this.pos = createVector(x, y);
+	this.size = createVector(w, h);
 	this.textsize = textsize;
 	this.textstyle = textstyle;
 	this.col = colortext;
 	this.name = name;
-	// this.boxcontain = new BoxContain(this);
+	this.boxcontain = new BoxContain(this);
+
+	this.setPosition = function(x, y){
+		this.pos = createVector(x, y);
+	}
+
+	this.setSize = function(w, h){
+		this.size = createVector(w, h);
+	}
 
 	this.show = function(){
 		noFill();
@@ -89,14 +98,24 @@ function nameSongClass(x, y, name, textsize, textstyle, colortext){
 		chooseTextStyle(this.textstyle);
 		textSize(this.textsize);
 		text(this.name, this.pos.x, this.pos.y);
+		// show box contain
+		if(showBoxContain){
+			strokeWeight(1);
+			stroke(255);
+			this.boxcontain.show();
+		}
+
 	}
 
 	this.changeProperties = function(newPos, newname, newtextsize, newtextstyle, newcolortext){
 		this.pos = newPos || this.pos;
+		// this.size = newSize || this.size;
 		this.name = newname || this.name;
 		this.textsize = newtextsize || this.textsize;
 		this.textstyle = newtextstyle || this.textstyle;
 		this.col = newcolortext || this.col;
+
+		this.boxcontain = new BoxContain(this);
 	}
 }
 

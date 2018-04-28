@@ -61,6 +61,6 @@ function SlideBar(x, y, w, h, min, max, firtValue) {
 		this.max = newMax || this.max;
 		this.val = newFirstValue || this.val;
 
-		this.boxcontain = new BoxContain(this.pos.x, this.pos.y, this.size.x, this.size.y);
+		this.boxcontain = new BoxContain(this);
 	}
 }
