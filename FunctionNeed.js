@@ -120,7 +120,7 @@ function getFileLocal(filein) {
 }
 
 function changeBackGround(IDbackground){
-	if(IDbackground > 48) IDbackground = 1;
+	if(IDbackground > 48) backgNow = 1;
 	var newBackG = loadImage("image/BackG"+IDbackground+".jpg",
 		function(dataNewImage){
 			backG = dataNewImage;
