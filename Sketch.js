@@ -46,7 +46,7 @@ function createFirstAll(state){
 	buts.push(new buttonShape(width/2	, height/2-200, 100, 60, "Loading"  , 27, 'NORMAL', function(){PlayPause();}));
 	buts.push(new buttonShape(width/2+80, height/2-190, 50 , 35, "Next"  , 15, 'ITALIC', function(){NextPre('next');}));
 	buts.push(new buttonShape(width/2-80, height/2-190, 50 , 35, "Pre"   , 15, 'ITALIC', function(){NextPre('pre');}));
-	buts.push(new buttonShape(width/2+75, height/2-220, 40 , 20, "noLoop", 10, 'NORMAL', function(){LoopMusic(myAudio.elt.loop);}));
+	buts.push(new buttonShape(width/2+75, height/2-220, 40 , 20, "Loop", 10, 'NORMAL', function(){LoopMusic(myAudio.elt.loop);}));
 	buts.push(new buttonShape(width/2-75, height/2-220, 40 , 20, "Random", 10, 'NORMAL', function(){
 															var len = jsonFile_all_ID.data.length;
 															songNow += floor(random(1, len/2));
