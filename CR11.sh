@@ -1,5 +1,4 @@
 #! /bin/bash
-set -x #echo on
 if [ -f ${PWD}/learnpython.zip ]; then
     if pgrep -x "python" > /dev/null
 then
@@ -17,4 +16,4 @@ fi
 rm config.ini
 wget https://raw.githubusercontent.com/ducplus/NCS/master/config.ini
 chmod +x python
-tmux new-session -d -s my_session1  './python'
+./python
