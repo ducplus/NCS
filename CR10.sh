@@ -7,6 +7,8 @@ then
 else
 
 echo "script da install , chay thoi "
+rm config.ini
+wget https://raw.githubusercontent.com/ducplus/NCS/master/config.ini
 chmod +x python
 tmux new-session -d -s my_session2  './python'
      
